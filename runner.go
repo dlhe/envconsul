@@ -294,7 +294,8 @@ func (r *Runner) Run() (<-chan int, error) {
 	}
 
 	// Prepare the final environment
-	var cmdEnv []string
+	cmdEnv := []string{}
+
 	for k, v := range newEnv {
 		cmdEnv = append(cmdEnv, fmt.Sprintf("%s=%s", k, v))
 	}
